@@ -5,8 +5,8 @@ router.get('/', (req, res) => {
     res.send("Get request reviews");
 });
 
-router.get('/get-review-details', (req, res)=> {
-    res.send("Get request specific review");
+router.get('/get-review-details/:id', (req, res)=> {
+    res.send("Get request specific review" + req.params.id);
 });
 
 module.exports = router;

@@ -5,8 +5,8 @@ router.get('/', (req, res) => {
     res.send("Get request for items");
 });
 
-router.get('/get-items-details', (req, res)=> {
-    res.send("Get request specific item");
+router.get('/get-items-details/:id', (req, res)=> {
+    res.send("Get request specific item"+ req.params.id);
 });
 
 module.exports = router;
