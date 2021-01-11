@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.send("Get request user ");
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a USER');
 });
 
-router.get('/get-user-details/:id', (req, res)=> {
-  res.send("Get request specific User"+ req.params.id);
+router.get('/id',function (req, res,next){
+  res.send('respond with a ID');
 });
 
 module.exports = router;
