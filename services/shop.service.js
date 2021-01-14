@@ -9,3 +9,9 @@ module.exports.getAll = () => {
 module.exports.getById = (id) => {
     return Shop.findById(id);
 }
+module.exports.updateDataId = () => {
+    return Shop.updateOne({name:'shakil-111',pation:'student'});
+}
+module.exports.deleteDataId = (id) => {
+    return Shop.deleteOne({_id:id});
+}
